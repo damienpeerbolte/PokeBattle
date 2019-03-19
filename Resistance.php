@@ -1,15 +1,11 @@
 <?php
     class Resistance {
-        public $name;
-        public $value;
+        public $resistanceName;
+        public $resistanceValue;
 
-        public function __construct($name, $value) {
-            $this->name = $name;
-            $this->value = $value;
-        }
-
-        public function __get($name) {
-            return $this->name[$name];
+        public function __construct($resistanceName, $resistanceValue) {
+            $this->resistanceName = $resistanceName;
+            $this->resistanceValue = $resistanceValue;
         }
     }
 ?>

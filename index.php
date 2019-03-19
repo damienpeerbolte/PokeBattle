@@ -18,7 +18,7 @@
     );
 
     $charmeleon = new Pokemon(
-        "Charmelion",
+        "Charmeleon",
         "Fire",
         60,
         [
@@ -31,4 +31,14 @@
 
     echo "A wild " . $pikachu->name . " has appeared! " . "It has " . $pikachu->hitPoints . "HP.<br />";
     echo "A wild " . $charmeleon->name . " has appeared! " . "It has " . $charmeleon->hitPoints . "HP.<br />";
+    echo $pikachu->name . " attacks " . $charmeleon->name . " with " . $pikachu->attacks[0]->attackName . "!<br />";
+
+    $charmeleon->hitPoints = $charmeleon->hitPoints - $pikachu->attacks[0]->damage + $charmeleon->resistance->resistanceValue;
+
+    echo $charmeleon->name . " has " . $charmeleon->hitPoints . "HP left!<br />";
+    echo $charmeleon->name . " attacks " . $pikachu->name . " with a " . $charmeleon->attacks[1]->attackName . " attack!<br />";
+
+    $pikachu->hitPoints = $pikachu->hitPoints - $charmeleon->attacks[1]->damage * $pikachu->weakness->multiplier;
+
+    echo $pikachu->name . " has " . $pikachu->hitPoints . "HP left!<br />";
 ?>

@@ -16,9 +16,5 @@
             $this->weakness = $weakness;
             $this->resistance = $resistance;
         }
-
-        public function __get($name) {
-            return $this->name[$name];
-        }
     }
 ?>

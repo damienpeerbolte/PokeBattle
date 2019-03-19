@@ -1,15 +1,11 @@
 <?php
     class Weakness {
-        public $name;
+        public $weaknessName;
         public $multiplier;
 
-        public function __construct($name, $multiplier) {
-            $this->name = $name;
+        public function __construct($weaknessName, $multiplier) {
+            $this->weaknessName = $weaknessName;
             $this->multiplier = $multiplier;
-        }
-
-        public function __get($name) {
-            return $this->name[$name];
         }
     }
 ?>

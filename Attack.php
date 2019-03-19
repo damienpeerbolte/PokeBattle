@@ -1,17 +1,13 @@
 <?php
     class Attack {
-        public $name;
+        public $attackName;
         public $attackType;
         public $damage;
 
-        public function __construct($name, $attackType, $damage) {
-            $this->name = $name;
+        public function __construct($attackName, $attackType, $damage) {
+            $this->attackName = $attackName;
             $this->attackType = $attackType;
             $this->damage = $damage;
-        }
-
-        public function __get($name) {
-            return $this->name[$name];
         }
     }
 ?>
