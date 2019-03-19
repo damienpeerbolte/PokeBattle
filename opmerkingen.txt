@@ -1,0 +1,8 @@
+Opmerkingen 19-03-2019:
+
+    Kelvin:
+    + ziet er netjes
+    - file structure
+    - comments
+    - gebruik van veel public variables
+    - hard coded
